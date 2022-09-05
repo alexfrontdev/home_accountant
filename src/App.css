@@ -1,0 +1,155 @@
+ 
+body {
+    background: #88BDBC;
+    font-family: 'Raleway';
+}
+input,select {
+    font-family: 'Raleway';
+    outline: none;
+}
+input:focus, select:focus, button:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.transaction_item {
+    padding: 15px 10px;
+    border-radius: 7px;
+    background: white;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-weight: bold;
+    align-items: center;
+    color:rgb(92, 88, 88);
+    animation: show 1s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        margin-left: -500px;
+        font-size: 1em;
+    }
+    
+    100% {
+        opacity: 1;
+        margin-left: 10px;
+        font-size: 1em;
+    }
+}
+
+.transaction_item div:first-child {
+    max-width: 200px;
+    font-size: 1.1em;
+}
+.transaction_item div:last-child {
+    font-size: 1.3em;
+    text-align: right;
+}
+ 
+.gain {
+    color: rgb(138, 206, 36);
+    font-size: 22px;
+}
+.expense {
+    font-size: 22px;
+    color: rgb(252, 76, 76);
+}
+.header {
+     
+    background-color: #F8E9A1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     
+} 
+.appname {
+    padding: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.balance {
+    background: white;
+    color: rgb(92, 88, 88);
+    float: right; 
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    animation: qw 2s forwards;
+}
+@keyframes qw {
+    0% { opacity: 0}
+    100% { opacity :1}
+}
+ 
+.transaction {
+    display: flex;
+    justify-content: center;
+ 
+    padding: 10px 0;
+    text-align: center;
+    background: white;
+}
+.field_incorrect {
+    border: 1px solid rgba(255,0,0,0.5);
+}
+.field_correct {
+    border: 1px solid rgb(58, 235, 58);
+}
+.transaction input,.transaction select,.transaction button { 
+    margin: 5px 10px;
+}
+button {
+    padding: 0px 35px;
+}
+.transaction_name,.transaction_sum { 
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(228, 220, 220);
+    height: 18px;
+}
+.transaction_name {
+    min-width: 180px;
+   
+}
+ 
+.transaction_type {
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(228, 220, 220);
+    height: 40px;
+     
+}
+.transaction_add {
+    height: 39px;
+    border: none;
+    cursor: pointer;
+}
+.empty_list {
+    text-align: center;
+    padding-top: 20px;
+}
+
+@media (min-width:320px) and (max-width: 744px) {
+    .transaction {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+ 
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+}
